@@ -1,0 +1,87 @@
+### CREATE five tasks.
+POST http://localhost:5000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Buy groceries",
+    "description": "Milk, Bread, Eggs",
+    "status": "pending",
+    "dueDate": "2024-07-28"
+}
+
+
+### CREATE 2
+POST http://localhost:5000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Pay bills",
+    "description": "Electricity, Water, Internet",
+    "status": "pending",
+    "dueDate": "2024-07-28"
+}
+
+### CREATE 3
+POST http://localhost:5000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Clean the house",
+    "description": "Living room, Kitchen, Bathroom",
+    "status": "pending",
+    "dueDate": "2024-07-28"
+}
+
+### CREATE 4
+POST http://localhost:5000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Complete project",
+    "description": "Finish the task-list app",
+    "status": "pending",
+    "dueDate": "2024-07-28"
+}
+
+### CREATE 5
+POST http://localhost:5000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Exercise",
+    "description": "Run 5 miles",
+    "status": "pending",
+    "dueDate": "2024-07-28"
+}
+
+
+### RETRIEVE all tasks.
+GET http://localhost:5000/api/tasks HTTP/1.1
+
+
+
+### RETRIEVE a task by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:5000/api/tasks/665418e00a2585f35ee219b1 HTTP/1.1
+
+
+### UPDATE one task's status, by ID.
+### Replace the ID in the following request with one that exists
+### and update the status:
+PUT http://localhost:5000/api/tasks/66541401a22eabd8f4c31d65 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Buy groceries",
+    "description": "Milk, Bread, Eggs",
+    "status": "completed",
+    "dueDate": "2024-07-28"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:5000/api/tasks/66a2c721462da8c2b54854f4 HTTP/1.1
+
+
+
+### RETRIEVE all tasks (responds with 4 or the original 5):
+GET http://localhost:5000/api/tasks HTTP/1.1
